@@ -26,3 +26,5 @@ router.put("/", (req, res) => {
 router.delete("/", (req, res) => {
   res.send("Delete an order by ID");
 });
+
+module.exports = router;
