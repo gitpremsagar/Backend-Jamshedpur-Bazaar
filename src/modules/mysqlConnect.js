@@ -11,7 +11,6 @@ async function makeQueryToDatabase(queryStatement, valuesArray) {
     database: process.env.MYSQL_DATABASE_NAME,
   });
 
-  console.log("Connected to MySql Server!");
   const response = await connection.query(queryStatement, valuesArray);
   connection.end();
   return response;
