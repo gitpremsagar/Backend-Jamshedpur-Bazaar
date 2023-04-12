@@ -1,5 +1,5 @@
 require("dotenv").config();
-const mysql = require("mysql2");
+const mysql = require("mysql2/promise");
 
 async function makeQueryToDatabase(queryStatement, valuesArray) {
   // create connection to the database
@@ -11,7 +11,8 @@ async function makeQueryToDatabase(queryStatement, valuesArray) {
     database: process.env.MYSQL_DATABASE_NAME,
   });
 
-  const response = connection.query(queryStatement, valuesArray);
+  console.log("Connected to MySql Server!");
+  const response = await connection.query(queryStatement, valuesArray);
   connection.end();
   return response;
 }
