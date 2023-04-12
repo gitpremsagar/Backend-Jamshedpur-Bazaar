@@ -30,7 +30,7 @@ router.post("/login", async (req, res) => {
         idusers: queryResponse[0][0].idusers,
         first_name: queryResponse[0][0].first_name,
         last_name: queryResponse[0][0].last_name,
-        user_type: "super_admin",
+        user_type: "super_git admin",
       },
       process.env.JWT_PRIVATE_KEY
     );
