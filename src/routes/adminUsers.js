@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
 const makeQueryToDatabase = require("../modules/mysqlConnect");
+const jwt = require("jsonwebtoken");
 
 // Admin API endpoints:
 

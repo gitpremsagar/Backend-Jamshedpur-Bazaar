@@ -11,6 +11,8 @@ const adminUsersHandler = require("./src/routes/adminUsers");
 
 app.use(express.json());
 app.use(cors());
+const corsOptions = { exposedHeaders: "x-auth-token" };
+app.use(cors(corsOptions));
 
 // assigning route handler
 app.use("/api/products", productsRouteHandler);
